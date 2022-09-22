@@ -16,9 +16,6 @@ module.exports.sendNoBallsEmail = (title, content) => {
   };
 
   sgMail.send(message)
-  .then(() => {
-    console.log('Email sent')
-  })
   .catch((error) => {
     console.error(error)
     console.log(error.response.body)
